@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'de.claudioaltamura'
-version = '4.0'
+version = '1.0'
 
 repositories {
     mavenCentral()
@@ -13,8 +13,7 @@ repositories {
 dependencies {
     // Kotlin Standard Library
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.1.10'
-    
-    // PicoCLI for command-line interface
+
     implementation 'info.picocli:picocli:4.7.5'
     
     // Testing

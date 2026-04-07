@@ -3,7 +3,7 @@ A simple Superheroes CLI tool
 
 ## Build
 
-    gradle build
+    ./gradlew build
 
 ## Run
 
