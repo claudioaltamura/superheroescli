@@ -1,0 +1,42 @@
+plugins {
+    id 'org.jetbrains.kotlin.jvm' version '2.1.10'
+    id 'application'
+}
+
+group = 'de.claudioaltamura'
+version = '4.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    // Kotlin Standard Library
+    implementation 'org.jetbrains.kotlin:kotlin-stdlib:2.1.10'
+    
+    // PicoCLI for command-line interface
+    implementation 'info.picocli:picocli:4.7.5'
+    
+    // Testing
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.1.2'
+}
+
+application {
+    mainClass = 'de.claudioaltamura.superheroescli.CheckSumKt'
+}
+
+java {
+    sourceCompatibility = JavaVersion.VERSION_23
+    targetCompatibility = JavaVersion.VERSION_23
+}
+
+tasks.withType(org.jetbrains.kotlin.gradle.tasks.KotlinCompile).configureEach {
+    kotlinOptions {
+        jvmTarget = '23'
+    }
+}
+
+test {
+    useJUnitPlatform()
+}
+
