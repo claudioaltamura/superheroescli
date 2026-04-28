@@ -3,6 +3,7 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 plugins {
     id 'org.jetbrains.kotlin.jvm' version '2.1.10'
     id 'application'
+    id 'com.gradleup.shadow' version '9.4.1'
 }
 
 group = 'de.claudioaltamura'
@@ -17,11 +18,7 @@ dependencies {
 
     implementation 'info.picocli:picocli:4.7.5'
 
-    testImplementation 'org.junit.jupiter:junit-jupiter:6.1.2'
-}
-
-application {
-    mainClass = 'de.claudioaltamura.superheroescli.CheckSumKt'
+    testImplementation 'org.junit.jupiter:junit-jupiter:6.0.1'
 }
 
 java {
@@ -30,8 +27,8 @@ java {
 }
 
 tasks.withType(KotlinCompile).configureEach {
-    kotlinOptions {
-        jvmTarget = '23'
+    compilerOptions {
+        jvmTarget = 'JVM_23'
     }
 }
 
@@ -39,3 +36,13 @@ test {
     useJUnitPlatform()
 }
 
+
+application {
+    mainClass = 'de.claudioaltamura.superheroescli.SuperheroesCLIBasic'
+}
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'de.claudioaltamura.superheroescli.SuperheroesCLIBasic'
+    }
+}
