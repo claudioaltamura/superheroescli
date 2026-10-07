@@ -23,10 +23,10 @@ class SuheOptions : Callable<Int> {
     private lateinit var exclusive: Exclusive
 
     internal class Exclusive {
-        @Option(names = ["-c", "--characters"], required = true, description = ["Search for characters"])
+        @Option(names = ["-ch", "--characters"], required = true, description = ["Search for characters"])
         var characters = false
 
-        @Option(names = ["-p", "--cities"], required = true, description = ["Search for cities"])
+        @Option(names = ["-ci", "--cities"], required = true, description = ["Search for cities"])
         var cities = false
     }
 
