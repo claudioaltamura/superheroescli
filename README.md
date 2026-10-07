@@ -9,8 +9,4 @@ A simple Superheroes CLI tool
 
 CL example
 
-    java -jar build/libs/superheroescli-1.0-all.jar    
-
-Or the CheckSum example
-
-    ./gradlew run --args="hello.txt"
+    java -jar build/libs/superheroescli-1.0-all.jar --ci New   
