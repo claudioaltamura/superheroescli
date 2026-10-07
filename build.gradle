@@ -41,11 +41,11 @@ test {
 
 
 application {
-    mainClass = 'de.claudioaltamura.superheroescli.SuperheroesCLIBasic'
+    mainClass = 'de.claudioaltamura.superheroescli.SuheOptions'
 }
 
 shadowJar {
     manifest {
-        attributes 'Main-Class': 'de.claudioaltamura.superheroescli.SuperheroesCLIBasic'
+        attributes 'Main-Class': 'de.claudioaltamura.superheroescli.SuheOptions'
     }
 }
